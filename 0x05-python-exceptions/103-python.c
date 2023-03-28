@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 /*
  * File: 103-python.c
  * Auth: Type Your Name Here
