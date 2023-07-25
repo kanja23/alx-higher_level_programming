@@ -1,20 +1,12 @@
 #!/usr/bin/node
 
 const fs = require('fs');
+const file = process.argv[2];
 
-function readAndPrintFileContent(filePath) {
-  fs.readFile(filePath, 'utf-8', (err, data) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log(data);
-    }
-  });
-}
-
-if (process.argv.length < 3) {
-  console.error('Usage: node readFileContent.js <file_path>');
-} else {
-  const filePath = process.argv[2];
-  readAndPrintFileContent(filePath);
-}
+fs.readFile(file, 'utf-8', function (err, data) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(data);
+  }
+});
